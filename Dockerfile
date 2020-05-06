@@ -1,10 +1,14 @@
 FROM jekyll/jekyll as build-stage
 
+COPY Gemfile* ./
+
+RUN bundle install
+
 WORKDIR /usr/src/app
 
 COPY . .
 
-RUN mkdir _site
+RUN chown -R jekyll .
 
 RUN jekyll build
 
