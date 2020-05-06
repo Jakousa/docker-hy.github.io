@@ -1,5 +1,7 @@
 FROM jekyll/jekyll as build-stage
 
+WORKDIR /tmp
+
 COPY Gemfile* ./
 
 RUN bundle install
