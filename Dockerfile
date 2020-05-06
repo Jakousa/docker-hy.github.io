@@ -1,4 +1,4 @@
-FROM jekyll/jekyll:pages as build-stage
+FROM jekyll/jekyll:3.8.3 as build-stage
 
 WORKDIR /tmp
 
